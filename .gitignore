@@ -1,0 +1,8 @@
+# Ignore compiled python files
+*.pyc
+
+# Ignore backup files
+*~
+
+# Ignore mysite/local_settings.py
+local_settings.py
