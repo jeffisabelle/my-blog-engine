@@ -4,5 +4,5 @@
 # Ignore backup files
 *~
 
-# Ignore mysite/local_settings.py
+# Ignore local_settings.py
 local_settings.py
