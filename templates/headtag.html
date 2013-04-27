@@ -1,0 +1,38 @@
+{% load static %}
+
+<head>
+  <title> Muhammet Can | Personal Blog </title>
+
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+  More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <!-- <link rel="stylesheet" href="css/minified.css"> -->
+
+  <!-- CSS imports non-minified for staging, minify before moving to production-->
+  <link rel="stylesheet" href="{% get_static_prefix %}css/imports.css">
+  <!-- end CSS-->
+
+  <!-- include fonts -->
+  <script type="text/javascript" src="//use.typekit.net/fas0zya.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css"/>
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+  Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+  For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="{% get_static_prefix %}js/libs/modernizr-2.0.6.min.js"></script>
+
+
+  <!-- jquery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>

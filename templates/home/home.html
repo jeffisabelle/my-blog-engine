@@ -1,0 +1,101 @@
+{% load static %}
+{% include "headtag.html" %}
+
+<body>
+  {% include "header.html" %}
+
+  <div class="row">
+    <div class="twelve columns center">
+      <h2>
+        welcome, you're seing my latest blog post and my twitter
+        stream. <br />
+        you can have a look at my <a href="/blog">full blog</a> or
+        my <a href="/projects">projects</a> if you wish.
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="powered-by-seperator"
+         style="margin-top: 15px; opacity: 0.5;"> </div>
+  </div>
+
+  <div class="row">
+    <div class="eight columns">
+        {% for post in posts %}
+        <!-- <h1>Latest Blog Post</h1> -->
+        <!-- <div class="post-seperator"> </div> -->
+
+        <a href="/blog/{{ post.post_name }}"> <h3>{{ post.post_title }}</h3> </a>
+        <span class="post-data">
+          <i class="icon-time"></i> {{ post.post_date}}
+        </span>
+        <span class="post-data">
+          <i class="icon-tags"></i>
+          {% for category in post.post_category.all %}
+          <a href="/blog/categories/{{ category.category_slug }}">
+          {{ category.category_title }} </a>,
+          {% endfor %}
+        </span>
+        <div class="entry">
+          {{ post.post_content|safe }}
+        </div>
+
+        <br />
+
+        <a href="{{ post.post_name }}" style="font-size: 0.9em;">
+          read more... </a>
+
+        {% empty %}
+        <p>
+          We have no posts to show at this time.
+        </p>
+        {% endfor %}
+
+    </div>
+
+    <div class="three columns push_one" style="padding-top: 35px;">
+      <!-- twitter widget -->
+      <a class="twitter-timeline"  href="https://twitter.com/jeffisabelle"  data-widget-id="301770723343601664">Tweets by @jeffisabelle</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <!-- end of twitter widget -->
+
+      <!-- <h1>Projects</h1> -->
+      <!-- <div class="post-seperator"></div> -->
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="powered-by-seperator"
+         style="margin-top: 15px; opacity: 0.5;"></div>
+  </div>
+
+  <!-- js recent tracks -->
+  <div class="recentTracks">
+    <div class="row">
+      <div class="three columns">
+        <h3>Profile::</h3>
+      </div>
+      <div class="nine columns">
+        <h3>Recently Played Tracks::</h3>
+      </div>
+    </div>
+    <div class="row">
+      <p id="recent" style="font-size: 11px;"></p>
+    </div>
+  </div>
+
+  {% include "footer.html" %}
+</body>
+
+
+<!-- Lastfm Api -->
+<script type="text/javascript"
+        src="{% get_static_prefix %}js/libs/lastfm/lastfm.api.md5.js"></script>
+<script type="text/javascript"
+        src="{% get_static_prefix %}js/libs/lastfm/lastfm.api.js"></script>
+<script type="text/javascript"
+        src="{% get_static_prefix %}js/libs/lastfm/lastfm.api.cache.js"></script>
+<script type="text/javascript"
+        src="{% get_static_prefix %}js/libs/lastfm/recent.js"></script>

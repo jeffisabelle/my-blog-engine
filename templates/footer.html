@@ -1,0 +1,53 @@
+{% load static %}
+<div id="footer">
+  <div class="container">
+
+    <div class="row">
+      <div class="twelve columns center">
+
+        <!-- <p class="white" style="margin: 20 0 0 0px;">built with
+             using; </p> -->
+        <br />
+        <div class="powered-by-seperator"> </div>
+
+        <a href="http://python.org" target="_blank">
+          <img src="{% get_static_prefix %}img/poweredby/python_logo.png"
+               class="powered-by" /></a>
+
+        <a href="http://djangoproject.com/" target="_blank">
+          <img src="{% get_static_prefix %}img/poweredby/django_logo.png"
+               class="powered-by" /></a>
+
+        <a href="http://nginx.org" target="_blank">
+          <img src="{% get_static_prefix %}img/poweredby/nginx_logo.png"
+               class="powered-by" /> </a>
+
+
+        <a href="http://webplatform.org" target="_blank">
+          <img src="{% get_static_prefix %}img/poweredby/webplatform_logo.png"
+               class="powered-by" /></a>
+
+
+        <a href="http://gumbyframework.com" target="_blank">
+          <img src="{% get_static_prefix %}img/poweredby/gumby_logo.png"
+               class="powered-by-gumby powered-by" /> </a>
+
+        <div class="powered-by-seperator"> </div>
+        <br />
+      </div>
+    </div>
+
+
+    <div class="row" style="min-height: 100px;">
+      <div class="twelve columns center">
+        <div id="randomQuote">
+          <p class="quotes" style="display: inline;"></p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div> <!-- end of footer -->
+
+{% include "jsimports.html" %}

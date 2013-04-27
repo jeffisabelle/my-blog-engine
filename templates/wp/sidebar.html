@@ -1,0 +1,84 @@
+<div id="sidebar"> <!-- start of sidebar -->
+  <h1>Recent Posts</h1>
+  <span class="post-data"> last 10 blog titles </span>
+  <div class="post-seperator"> </div>
+  <ul>
+    {% for recent in recents %}
+    <li><a href="/blog/{{ recent.post_name }}"> {{ recent.post_title }}</a> </li>
+    {% empty %}
+    <p> Sorry no recent posts </p>
+    {% endfor %}
+  </ul>
+
+
+  <h1>Popular Posts</h1>
+  <span class="post-data"> and these are the loved ones </span>
+  <div class="post-seperator"> </div>
+  <ul>
+    {% for popular in populars %}
+    <li><a href="/blog/{{ popular.post_name }}"> {{ popular.post_title }}</a> </li>
+    {% empty %}
+    <p> Sorry no popular posts </p>
+    {% endfor %}
+  </ul>
+
+  <h1>Categories</h1>
+  <div class="post-seperator"> </div>
+  <ul>
+    {% for category in categories %}
+    <li><a href="/blog/categories/{{ category.category_slug }}"> {{ category.category_title }}</a> </li>
+    {% empty %}
+    <p> Sorry no category at all </p>
+    {% endfor %}
+  </ul>
+
+  <div class="post-seperator"> </div>
+
+  <a href="http://stackoverflow.com/users/460281/muhammet-can">
+    <img src="http://stackoverflow.com/users/flair/460281.png"
+         width="208" height="58" alt="profile for Muhammet Can at SO"
+         title="profile for Muhammet Can at Stack Overflow, Q&amp;A for
+                professional and enthusiast programmers" style="padding: 10 0px;">
+  </a>
+
+  <!-- twitter widget -->
+  <a class="twitter-timeline"  href="https://twitter.com/jeffisabelle"  data-widget-id="301770723343601664">Tweets by @jeffisabelle</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <!-- end of twitter widget -->
+
+  <br /><br />
+  <iframe src="http://githubbadge.appspot.com/badge/jeffisabelle"
+          style="border: 0; height: 120px; width: 208px;
+                 overflow: hidden;"
+          frameBorder="0">
+  </iframe>
+
+  <br /><br />
+
+  <!-- pkgs.org widget -->
+  <div id="pkgs_widget" style="display:none">
+    <div id="pkgs_header">
+      <a href="http://pkgs.org/new-linux-software-free-download/"
+         target="_blank">
+        New Linux Softwares</a></div>
+
+    <div id="pkgs_data"></div>
+
+    <div id="pkgs_footer"><a href="http://pkgs.org/" target="_blank">
+        Powered by pkgs.org</a></div>
+  </div>
+
+  <script type="text/javascript">
+    function pkgs_async_load() {
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "http://pkgs.org/ajax/?func=get_widget&wi=220&cnt=10&da=1&co=10&bo=414040&hc=ffffff&" +
+            "hb=414040&dc=000000&db=eeeeee&ic=414040&ib=ffffff&ihc=d54f31&ihb=ebf2fa&fc=000000&fb=eeeeee";
+        var x = document.getElementsByTagName("script")[0]; x.parentNode.insertBefore(s, x);
+    }
+    if (window.attachEvent) window.attachEvent("onload", pkgs_async_load);
+    else window.addEventListener("load", pkgs_async_load, false);
+  </script>
+  <!-- pkgs.org widget -->
+
+
+</div> <!-- end of sidebar -->

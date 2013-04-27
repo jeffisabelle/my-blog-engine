@@ -1,0 +1,84 @@
+{% load static %}
+{% include "headtag.html" %}
+
+<script src="{% get_static_prefix%}js/libs/fancy/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="{% get_static_prefix%}js/libs/fancy/jquery.fancybox.js?v=2.1.4"></script>
+<link href="{%get_static_prefix%}js/libs/fancy/jquery.fancybox.css?v=2.1.4"
+      rel="stylesheet" type="text/css">
+
+<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+    });
+</script>
+
+
+<body>
+  {% include "header.html" %}
+
+
+  <div class="row">
+    <div class="twelve columns center">
+      <h2>my current & past projects</h2>
+      <br />
+    </div>
+  </div>
+
+  {% for project in projects %}
+  <div class="row">
+    <div class="twelve columns">
+      <!-- <h2>{{ project.project_title }}</h2> -->
+      <table width="" cellspacing="" cellpadding="" border="">
+        <tr>
+          <td> Title </td>
+          <td> {{ project.project_title }} </td>
+        </tr>
+        <tr>
+          <td> Screenshot </td>
+          <td>
+            <a href="{{ project.screenshot_link }}" class="fancybox"
+               data-fancybox-group="{{project.project_title }}"
+               title="{{project.project_title }}">
+              <img src="{{ project.thumbnail_link }}" class="project" /></a>
+            <a href="{{ project.screenshot_link2 }}" class="fancybox"
+               data-fancybox-group="{{project.project_title }}"
+               title="{{project.project_title }}">
+              <img src="{{ project.thumbnail_link2 }}" class="project" /></a>
+            <a href="{{ project.screenshot_link3 }}" class="fancybox"
+               data-fancybox-group="{{project.project_title }}"
+               title="{{project.project_title }}">
+              <img src="{{ project.thumbnail_link3 }}" class="project" alt="" /></a>
+          </td>
+        </tr>
+        <tr>
+          <td> License </td>
+          <td> {{ project.project_license }} </td>
+        </tr>
+        <tr>
+          <td> Authors </td>
+          <td> {{ project.project_authors }} </td>
+        </tr>
+        <tr>
+          <td> Source Code </td>
+          <td> <a href="{{ project.project_source }}">hosted on github</a> </td>
+        </tr>
+        <tr>
+          <td> Tech Stack </td>
+          <td> {{ project.project_stack }} </td>
+        </tr>
+        <tr>
+          <td> Description </td>
+          <td> {{ project.project_desc | safe }} </td>
+        </tr>
+
+      </table>
+      <h2 class="center" style="padding-bottom: 15px;">* * * * </h2>
+
+    </div>
+  </div> <!-- end of row -->
+  {% endfor %}
+
+
+  {% include "footer.html" %}
+</body>
