@@ -1,50 +1,108 @@
-/*=======================================================================
+body {
+    line-height: normal;
+    /* font-family: Ubuntu; */
+}
 
-	❤❤❤ Gumby by Digital Surgeons. ❤❤❤
-	
-	*** This is where you should keep all of your TEXT styles ***
- 
- ========================================================================*/
- 
- 	
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- /* ==|== media queries ======================================================
-    PLACEHOLDER Media Queries for Responsive Design.
-    These override the primary ('mobile first') styles
-    Modify as content requires.
-    ========================================================================== */
- 
- @media only screen and (min-width: 480px) {
-   /* Style adjustments for viewports 480px and over go here */
- 
- }
- 
- @media only screen and (min-width: 768px) {
-   /* Style adjustments for viewports 768px and over go here */
- 
- }
+
+/* headings */
+h1, h2, h3, h4 {
+    color: maroon;
+    text-shadow: 2px 1px #EEE;
+}
+
+h2, h3, h4 {
+    color: #414040;
+    font-size: 1.1em;
+}
+
+h1 {
+    font-size: 1.4em;
+    line-height: 120%;
+}
+
+h1.white:hover {
+    color: white;
+}
+
+
+
+
+/* paragraphs */
+p.quotes {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* links */
+a {
+    color: maroon;
+    text-shadow: 0 1px 1px white;
+}
+
+a h1 {
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+}
+
+a h1:hover {
+    color: black;
+}
+
+
+
+/* icons */
+i {
+    color: #CE4629;
+}
+
+.social {
+    text-align: right;
+    padding: 5px;
+}
+
+.icon-large-mami {
+    font-size: 2em;
+    padding: 2px;
+}
+
+
+
+
+/* others */
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.white {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.entry {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 22px;;
+    /* text-align: justify; */
+}
+
+.post-data {
+    color: black;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+
+@media only screen and (min-width: 480px) {
+/* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+/* Style adjustments for viewports 768px and over go here */
+
+}
