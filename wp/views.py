@@ -19,8 +19,8 @@ def show_posts(request, category="all"):
     posts = posts[:4]
 
     for p in posts:
-        p.post_content = p.post_content[:700] + \
-                         p.post_content[700:].split("<br")[0]
+        p.post_content = p.post_content[:900] + \
+                         p.post_content[900:].split("<br")[0]
 
     return render_to_response('wp/posts.html', {"posts": posts,
                                                 "recents": recents,
