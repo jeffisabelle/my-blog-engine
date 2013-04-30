@@ -17,7 +17,7 @@ lastfm.user.getInfo({user: 'nicksiz'}, {success: function(info){
   document.getElementById("recent").innerHTML += '<div class="one columns">' +
     '<img src="'+info.user.image[1]["#text"]+'"/> </div>';
 
-  document.getElementById("recent").innerHTML += '<div class="two columns" style="padding: 20 10px;">' +
+  document.getElementById("recent").innerHTML += '<div class="two columns" style="padding: 5 5px;">' +
     "<a href="+info.user.url+">" +
     "jeffisabelle" + "</a>" + " <br /> " +
     info.user.playcount +" tracks scrobbled <br /> since " +
@@ -38,13 +38,13 @@ lastfm.user.getRecentTracks({user: 'nicksiz'}, {success: function(recent){
         '<img src="'+recent.recenttracks.track[i].image[1]["#text"]+'"/> </div>';
 
       if(i===gosterilecek-1) {
-        document.getElementById("recent").innerHTML += '<div class="two columns" style="padding: 20 10px;">' +
+        document.getElementById("recent").innerHTML += '<div class="two columns" style="padding: 5 5px;">' +
           "<a href="+recent.recenttracks.track[i].url+">" +
           recent.recenttracks.track[i].name + "</a>" + " <br /> by " +
           recent.recenttracks.track[i].artist["#text"]+"<br /> at " +
           recent.recenttracks.track[i+1].date["#text"]+"<br /><br /></div>";
       } else {
-        document.getElementById("recent").innerHTML += '<div class="two columns" style="padding: 20 10px;">' +
+        document.getElementById("recent").innerHTML += '<div class="two columns" style="padding: 5 5px;">' +
           "<a href="+recent.recenttracks.track[i].url+">" +
           recent.recenttracks.track[i].name + "</a>" + " <br /> by " +
           recent.recenttracks.track[i].artist["#text"]+"<br /> at " +

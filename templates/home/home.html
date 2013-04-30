@@ -26,7 +26,7 @@
         <!-- <h1>Latest Blog Post</h1> -->
         <!-- <div class="post-seperator"> </div> -->
 
-        <a href="/blog/{{ post.post_name }}"> <h3>{{ post.post_title }}</h3> </a>
+        <a href="/blog/{{ post.post_name }}"> <h3 style="margin-bottom:0px;">{{ post.post_title }}</h3> </a>
         <span class="post-data">
           <i class="icon-time"></i> {{ post.post_date}}
         </span>
@@ -54,7 +54,7 @@
 
     </div>
 
-    <div class="three columns push_one" style="padding-top: 35px;">
+    <div class="three columns push_one" style="padding-top: 15px;">
       <!-- twitter widget -->
       <a class="twitter-timeline"  href="https://twitter.com/jeffisabelle"  data-widget-id="301770723343601664">Tweets by @jeffisabelle</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
