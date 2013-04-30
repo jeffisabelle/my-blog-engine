@@ -95,6 +95,18 @@ i {
     /* text-align: justify; */
 }
 
+.entry pre {
+    text-shadow: 0 1px 1px black;
+    margin: 15 0px;
+}
+
+.entry pre code {
+    padding-bottom: 25px;
+    padding-left: 20px;
+}
+
+
+
 .post-data {
     color: black;
     font-size: 12px;
