@@ -10,7 +10,7 @@ body {
 
 img {
     display: block;
-    padding: 20px;
+    padding: 0 10px;
 }
 
 h1, h2, h3, h4 {
@@ -21,10 +21,6 @@ h1 {
     margin: 30 0 0 0px;
 }
 
-
-h2, h3, h4 {
-    padding-left: 20px;
-}
 
 #header {
     min-height: 160px;
