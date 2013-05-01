@@ -5,6 +5,21 @@
   {% include "header.html" %}
 
   <div class="container"> <!-- start of container -->
+    <div class="row">
+      <div class="twelve columns center">
+        <h2>
+          serious alert <br />
+          contains nerdy talk
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="powered-by-seperator"
+           style="margin-top: 15px; opacity: 0.5;"> </div>
+    </div>
+
+
     <div class="row">     <!-- start of row -->
       <div class="eight columns">
         {% for post in posts %}
@@ -20,7 +35,8 @@
             {{ category.category_title }} </a>,
           {% endfor %}
         </span>
-        <div class="post-seperator"> </div>
+        <div class="powered-by-seperator"
+             style="margin-bottom: 10px; opacity: 0;"> </div>
         <div class="entry">
           {{ post.post_content|safe }}
         </div>
@@ -43,6 +59,12 @@
       </div>
 
     </div> <!-- end of row -->
+
+    <div class="row">
+      <div class="powered-by-seperator"
+           style="margin-top: 15px;"> </div>
+    </div>
+
   </div> <!-- end of container -->
 
   {% include "footer.html" %}

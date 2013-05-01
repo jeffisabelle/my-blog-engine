@@ -1,7 +1,9 @@
 <div id="sidebar"> <!-- start of sidebar -->
   <h1>Recent Posts</h1>
-  <span class="post-data"> last 10 blog titles </span>
-  <div class="post-seperator"> </div>
+  <span class="post-data"> here is the latest blog titles </span>
+  <div class="powered-by-seperator"
+       style="margin-bottom: 10px; opacity: 0;"> </div>
+
   <ul>
     {% for recent in recents %}
     <li><a href="/blog/{{ recent.post_name }}"> {{ recent.post_title }}</a> </li>
@@ -13,7 +15,11 @@
 
   <h1>Popular Posts</h1>
   <span class="post-data"> and these are the loved ones </span>
-  <div class="post-seperator"> </div>
+  <div class="powered-by-seperator"
+       style="margin-bottom: 10px; opacity: 0;"> </div>
+
+  <!-- <div class="powered-by-seperator" style="margin-bottom: 10px;"> </div> -->
+  <!-- <div class="post-seperator"> </div> -->
   <ul>
     {% for popular in populars %}
     <li><a href="/blog/{{ popular.post_name }}"> {{ popular.post_title }}</a> </li>
@@ -23,7 +29,11 @@
   </ul>
 
   <h1>Categories</h1>
-  <div class="post-seperator"> </div>
+  <div class="powered-by-seperator"
+       style="margin-bottom: 10px; opacity: 0;"> </div>
+
+  <!-- <div class="powered-by-seperator" style="margin-bottom: 10px;"> </div> -->
+  <!-- <div class="post-seperator"> </div> -->
   <ul>
     {% for category in categories %}
     <li><a href="/blog/categories/{{ category.category_slug }}"> {{ category.category_title }}</a> </li>
@@ -31,8 +41,11 @@
     <p> Sorry no category at all </p>
     {% endfor %}
   </ul>
+  <div class="powered-by-seperator"
+       style="margin-bottom: 10px; opacity: 0;"> </div>
 
-  <div class="post-seperator"> </div>
+  <!-- <div class="powered-by-seperator" style="margin-bottom: 10px;"> </div> -->
+  <!-- <div class="post-seperator"> </div> -->
 
 <!--
   <a href="http://stackoverflow.com/users/460281/muhammet-can">

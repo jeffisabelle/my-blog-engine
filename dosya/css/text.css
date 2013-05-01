@@ -29,6 +29,9 @@ entry h2, h3, h4 {
     margin: 10px;
 }
 
+.entry img {
+    padding: 10px;
+}
 
 /* paragraphs */
 p.quotes {
