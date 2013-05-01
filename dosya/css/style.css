@@ -13,7 +13,7 @@ img {
     padding: 0 10px;
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
     margin: 20 0 0 0px;
 }
 
@@ -108,6 +108,7 @@ h1 {
     /* border: 1px solid rgba(150, 0, 0, 0.2); */
     border: 1px dotted maroon;
     margin-bottom: 20px;
+    opacity: 0.1;
 }
 
 
