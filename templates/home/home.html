@@ -26,8 +26,9 @@
         <!-- <h1>Latest Blog Post</h1> -->
         <!-- <div class="post-seperator"> </div> -->
 
-        <a href="/blog/{{ post.post_name }}"> <h3 style="margin-bottom:0px;">{{ post.post_title }}</h3> </a>
-        <span class="post-data">
+        <a href="/blog/{{ post.post_name }}">
+          <h3 style="margin-bottom:0px;">{{ post.post_title }}</h3> </a>
+        <span class="post-data" style="margin-left: 20px;">
           <i class="icon-time"></i> {{ post.post_date}}
         </span>
         <span class="post-data">
@@ -37,6 +38,10 @@
           {{ category.category_title }} </a>,
           {% endfor %}
         </span>
+
+        <div class="powered-by-seperator"
+             style="margin-bottom: 10px; opacity: 0;"> </div>
+
         <div class="entry">
           {{ post.post_content|safe }}
         </div>
