@@ -61,11 +61,12 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         current_time = datetime.now()
 
-        p = Post.objects.filter(post_name=self.post_name)
+        p = Post.objects.filter(post_name=slugify(self.post_title))
+
         if not p:
+            self.post_author = 1
             self.post_date = current_time
             self.post_date_gmt = current_time
-            self.post_author = 1
             self.post_name = slugify(self.post_title)
             self.post_status = "publish"
             self.post_type = "post"

@@ -4,10 +4,12 @@ from django.contrib import admin
 
 class PostAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Content', {'fields': ['post_title',
-                                'post_content',
-                                'post_category',
-                                'post_views']}),
+        ('Content', {'fields':
+                     ['post_title',
+                      'post_content',
+                      'post_category',
+                      'post_views',
+                      'post_status']}),
     ]
 
     list_display = ('post_title', 'post_status', 'post_date')
