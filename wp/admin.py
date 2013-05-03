@@ -6,7 +6,8 @@ class PostAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Content', {'fields': ['post_title',
                                 'post_content',
-                                'post_category']}),
+                                'post_category',
+                                'post_views']}),
     ]
 
     list_display = ('post_title', 'post_status', 'post_date')
