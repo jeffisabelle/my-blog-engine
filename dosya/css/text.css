@@ -68,6 +68,10 @@ i {
     color: #CE4629;
 }
 
+.entry i {
+    color: #414040;
+}
+
 .social {
     text-align: right;
     padding: 5px;
