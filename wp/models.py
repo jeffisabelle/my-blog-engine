@@ -62,6 +62,9 @@ class Post(models.Model):
         current_time = datetime.now()
 
         p = Post.objects.filter(post_name=slugify(self.post_title))
+        print "\n\n"
+        print p
+        print "\n\n"
 
         if not p:
             self.post_author = 1

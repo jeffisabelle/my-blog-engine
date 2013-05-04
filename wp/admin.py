@@ -8,6 +8,7 @@ class PostAdmin(admin.ModelAdmin):
                      ['post_title',
                       'post_content',
                       'post_category',
+                      'post_date',
                       'post_views',
                       'post_status']}),
     ]
