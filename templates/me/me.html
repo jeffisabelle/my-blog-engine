@@ -1,0 +1,96 @@
+{% load static %}
+{% include "headtag.html" %}
+
+<script src="{% get_static_prefix%}js/libs/fancy/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="{% get_static_prefix%}js/libs/fancy/jquery.fancybox.js?v=2.1.4"></script>
+<link href="{%get_static_prefix%}js/libs/fancy/jquery.fancybox.css?v=2.1.4"
+      rel="stylesheet" type="text/css">
+
+<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+
+        $(".various").fancybox({
+            maxWidth	: 900,
+            maxHeight	: 700,
+            fitToView	: true,
+            width	: '80%',
+            height	: '80%',
+            autoSize	: false,
+            closeClick	: false,
+            openEffect	: 'none',
+            closeEffect	: 'none'
+        });
+    });
+</script>
+
+<body>
+  {% include "header.html" %}
+
+  <div class="row">
+    <div class="twelve columns center">
+      <h2>
+        please have a look at
+        <a class="various fancybox.iframe" href="/me/schedule.html">
+          my schedule
+        </a>
+        <br />
+        before calling me football match or counter-strike.
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="powered-by-seperator"
+         style="margin-top: 15px; opacity: 0.5;"> </div>
+  </div>
+
+  <div class="row">
+    <!-- content here -->
+    <div class="twelve columns">
+      <br /><br /><br /><br />
+      I'll fill this place with my hobbies & work experiences. <br />
+      But ain't nobady got time for that!
+
+
+    </div>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br />
+  </div>
+
+
+  <div class="row">
+    <div class="powered-by-seperator"
+         style="margin-top: 15px; opacity: 0.5;"></div>
+  </div>
+
+
+  <!-- js recent tracks -->
+  <div class="recentTracks">
+    <div class="row">
+      <div class="three columns">
+        <h3>Profile::</h3>
+      </div>
+      <div class="nine columns">
+        <h3>Recently Played Tracks::</h3>
+      </div>
+    </div>
+    <div class="row">
+      <p id="recent" style="font-size: 11px;"></p>
+    </div>
+  </div>
+
+  {% include "footer.html" %}
+</body>
+
+<!-- Lastfm Api -->
+<script type="text/javascript"
+        src="{% get_static_prefix %}js/libs/lastfm/lastfm.api.md5.js"></script>
+<script type="text/javascript"
+        src="{% get_static_prefix %}js/libs/lastfm/lastfm.api.js"></script>
+<script type="text/javascript"
+        src="{% get_static_prefix %}js/libs/lastfm/lastfm.api.cache.js"></script>
+<script type="text/javascript"
+        src="{% get_static_prefix %}js/libs/lastfm/recent.js"></script>
