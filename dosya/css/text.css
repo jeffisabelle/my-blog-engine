@@ -14,9 +14,11 @@ h1, h2, h3, h4 {
 h2, h3, h4 {
     color: #414040;
     font-size: 1.1em;
+    margin: 20 0 0 0px;
 }
 
 h1 {
+    margin: 20 0 0 0px;
     font-size: 1.4em;
     line-height: 120%;
 }
@@ -70,6 +72,8 @@ i {
 
 .entry i {
     color: #414040;
+    font-size: 0.7em;
+    margin-left: 10px;
 }
 
 .social {
@@ -120,7 +124,7 @@ i {
 .post-data {
     color: black;
     font-size: 12px;
-    margin-left: 10px;
+    margin-left: 1px;
 }
 
 

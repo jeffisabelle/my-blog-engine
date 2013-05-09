@@ -13,15 +13,6 @@ img {
     padding: 0 10px;
 }
 
-h2, h3, h4 {
-    margin: 20 0 0 0px;
-}
-
-h1 {
-    margin: 30 0 0 0px;
-}
-
-
 #header {
     min-height: 160px;
     background-image: url("../img/bg-dark.png");
