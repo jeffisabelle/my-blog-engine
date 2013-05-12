@@ -13,10 +13,9 @@ from django.template.defaultfilters import slugify
 
 class Category(models.Model):
     category_title = models.TextField(max_length=100)
-    category_slug = models.TextField(max_length=100, blank=True)
+    category_slug = models.TextField(max_length=100)
 
     def save(self, *args, **kwargs):
-        self.category_slug = slugify(self.category_title)
         super(Category, self).save(*args, **kwargs)
 
     def __unicode__(self):

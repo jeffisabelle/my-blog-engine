@@ -13,7 +13,7 @@ def show_posts(request, category="all"):
     recents = posts[:10]
 
     if category is not "all":
-        c = categories.filter(category_title=category)
+        c = categories.filter(category_slug=category)
         posts = posts.filter(post_category=c)
 
     posts = posts[:4]
