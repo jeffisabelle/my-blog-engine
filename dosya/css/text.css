@@ -110,16 +110,14 @@ i {
 }
 
 .entry pre {
-    text-shadow: 0 1px 1px black;
+    text-shadow: 0 0px 1px black;
     margin: 15 0px;
 }
 
 .entry pre code {
-    padding-bottom: 25px;
-    padding-left: 20px;
+    /* padding-bottom: 25px; */
+    /* padding-left: 20px; */
 }
-
-
 
 .post-data {
     color: black;
