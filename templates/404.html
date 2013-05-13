@@ -1,0 +1,84 @@
+{% load static %}
+{% include "headtag.html" %}
+
+<body>
+  {% include "header.html" %}
+
+  <div class="row">
+    <div class="twelve columns center">
+      <h2>
+        The document you're looking for couldn't be found. (404)
+      </h2>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="powered-by-seperator"
+         style="margin-top: 15px; opacity: 0.5;"> </div>
+  </div>
+
+  <!-- <div class="row"> -->
+  <!--   <div class="twelve columns"> -->
+  <!--     <h1>What Happened?</h1> -->
+  <!--   </div> -->
+  <!-- </div> -->
+
+  <div class="row">
+    <div class="five columns entry">
+      <h2>
+        <i class="icon-hand-right"
+           style="margin: 0px; font-size: 1em;"></i>
+        For Techy People
+      </h2>
+      <p style="text-align: justify;">
+        You probably know what just happened but, <br />
+        in case you don't know; <br /> <br />
+
+        You have send a GET Request to this web server, then my reverse
+        proxy, nginx, forwarded it to uWSGI server after serving static
+        files. The uWSGI server tried to route you to the view you are
+        looking for, but, somewhere in there, my application has raised
+        an exception and returned 404 http response.<br /><br />
+
+        Please have a look at following wikipedia articles for deeper
+        information.<br /><br />
+
+        <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">
+          List of Http Status Codes
+        </a> <br />
+        <a href="http://en.wikipedia.org/wiki/HTTP_404">
+          Http 404
+        </a> <br />
+      </p>
+    </div>
+
+    <div class="five columns push_two entry">
+      <h2>
+        <i class="icon-hand-right"
+           style="margin: 0px; font-size: 1em;"></i>
+        For Normal People
+      </h2>
+      <p style="text-align: justify;">
+        Hello mate <br />
+        What's up? <br /><br />
+
+        The web page you requested is not here. Please double check the
+        address bar above that you didn't misspelled anything. If you came up
+        here from a hyperlink or google, the document you are looking
+        for likely moved or deleted.
+        <br /><br />
+
+        Please have a look at archive pages if you want to dig further
+        or return to blog homepage.
+        <br /><br />
+
+        <a href="/archive">Archive</a> <br />
+        <a href="/">Home</a> <br />
+        <a href="/blog">Blog</a> <br />
+      </p>
+    </div>
+  </div>
+
+  {% include "footer.html" %}
+</body>

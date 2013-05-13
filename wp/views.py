@@ -1,6 +1,7 @@
 # Create your views here.
 from wp.models import Post, Category
 from django.shortcuts import render_to_response
+from django.http import Http404
 
 
 def show_posts(request, category="all"):
@@ -31,8 +32,11 @@ def show_posts(request, category="all"):
 def single_post(request, postname):
     categories = Category.objects.all()
 
-    post = Post.objects.get(post_type="post",
-                                  post_status="publish", post_name=postname)
+    try:
+        post = Post.objects.get(post_type="post",
+                                post_status="publish", post_name=postname)
+    except Post.DoesNotExist:
+        raise Http404
 
     post.post_views += 1
     post.save()
