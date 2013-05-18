@@ -35,7 +35,7 @@ def single_post(request, postname):
     try:
         post = Post.objects.get(post_type="post",
                                 post_status="publish", post_name=postname)
-    except Post.DoesNotExist:
+    except:
         raise Http404
 
     post.post_views += 1
