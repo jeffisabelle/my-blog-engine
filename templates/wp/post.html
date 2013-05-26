@@ -20,7 +20,7 @@
     </div>
 
     <div class="row">     <!-- start of row -->
-      <div class="eight columns">
+      <div class="ten columns push_one">
         <a href="/blog/{{ post.post_name }}">
           <h1> {{ post.post_title}} </h1> </a>
 
@@ -38,15 +38,15 @@
         <div class="powered-by-seperator"
              style="margin-bottom: 10px; opacity: 0;"> </div>
 
-        <div class="entry">
+        <div class="entry" style="text-align: justify;">
           {{ post.post_content|safe }}
         </div>
         <br />
       </div>
 
-      <div class="three columns push_one">
-        {% include "wp/sidebar.html" %}
-      </div>
+      <!-- <div class="three columns push_one"> -->
+      <!--    include "wp/sidebar.html"  -->
+      <!-- </div> -->
 
     </div> <!-- end of row -->
 

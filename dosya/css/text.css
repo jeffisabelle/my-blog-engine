@@ -32,6 +32,7 @@ entry h2, h3, h4 {
 }
 
 .entry img {
+    margin: 0 auto;
     padding: 10px;
 }
 
