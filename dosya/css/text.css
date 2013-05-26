@@ -7,7 +7,7 @@ body {
 
 /* headings */
 h1, h2, h3, h4 {
-    color: maroon;
+    color: #414040;
     text-shadow: 2px 1px #EEE;
 }
 
@@ -34,6 +34,11 @@ entry h2, h3, h4 {
 .entry img {
     margin: 0 auto;
     padding: 10px;
+}
+
+.entry iframe {
+    display: block;
+    margin: 0 auto;
 }
 
 /* paragraphs */
